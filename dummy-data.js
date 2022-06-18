@@ -29,6 +29,16 @@ const DUMMY_EVENTS = [
       image: 'images/extrovert-event.jpg',
       isFeatured: true,
    },
+   {
+      id: 'e4',
+      title: 'Date with Ponnu',
+      description:
+         'Had a fantastic date with my sweetheart sis ponnu at South-Ex, were we spent some memorable days together 🧡💝💗',
+      location: 'South Ex, New Delhi',
+      date: '2022-07-16',
+      image: 'images/date-with-ponnu.jpg',
+      isFeatured: true,
+   },
 ];
 
 export function getFeaturedEvents() {
