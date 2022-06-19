@@ -1,4 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## getStaticProps vs getServerSideProps
+
+getStaticProps is good for a static app like blog, where you can upload the blog and build  again. For frequent updates like adding / removing product, getServerSideProps is better is suited.
+
+## Important Tips
+
+   1. Using useEffect means you'll need to fetch data and it won't prefetched in the browser. It's better to use nextjs features.
 
 ## Getting Started
 
