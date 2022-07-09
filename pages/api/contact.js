@@ -20,8 +20,14 @@ async function handler(req, res) {
       const newMessage = { email, name, message }
       
       let client;
+
+      // use the following connection string if env variables stored in next.config.js
+      // let connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.qcd6a5x.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
+
+      let connectionString = process.env.MONGO_URL;
+
       try {
-         client = await MongoClient.connect(process.env.MONGO_URL);
+         client = await MongoClient.connect(connectionString);
       } catch (error) {
          res.status(500).json({ message: 'could not connect to database'})
          return;
